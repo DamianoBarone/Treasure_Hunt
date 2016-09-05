@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Treasure hunt </title>
+        <link rel="stylesheet" href="jquery-ui.css">
+        <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+        <script src="https://code.jquery.com/ui/1.12.0/jquery-ui.js"></script>
+        <script>
+            $(function () {
+                $("#datepicker").datepicker();
+            });
+            $(function () {
+                $("#datepicker_2").datepicker();
+            });
+        </script>
+
+    </head>
+    <body >
+        <form name=form_add_event action="Servlet" method= "get">
+            <p>Name Event <input type="text" name="name_event"></p>
+            <p>Start Date: <input type="text" id="datepicker" name="start_data"></p>
+            <p>Start Hour (HH:MM): <input type="text"  name="start_hour"></p>
+            <p>End Date: <input type="text" id="datepicker_2" name="end_data"></p>
+            <p>End Hour (HH:MM): <input type="text"  name="end_hour"></p>
+                     <p>Number of step <input type="text"  name="number_step"></p>
+
+           City:  <select name="city" >
+                <option value="Pisa">Pisa</option>
+                <option value="Casuzze">Casuzze</option>
+                <option value="La_Spezia">La Spezia</option>
+            </select>
+  <input type="submit" value="Submit">
+            </form>
+
+
+
+    </body>
+</html>
