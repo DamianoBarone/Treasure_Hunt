@@ -57,72 +57,7 @@ public class CameraViewActivity extends Activity implements
 	double nextPointLat, nextPointLon,pointLat,pointLon;
 	String idEvent;
 
-	/*public static final MediaType JSON = MediaType.parse("application/json; charset=utf-8");
-	public static final String URL  = "http://192.168.1.196:8080/Treasure_server/Servlet";
-	OkHttpClient client = new OkHttpClient();
-
-	public String send(String url, String json) {//LOLLO
-	    String servletresponse=null;
-		System.out.println("funzione send dell'immagine");
-		RequestBody body = RequestBody.create(JSON, json);
-		Request request = new Request.Builder()
-				.url(url)
-				.post(body)
-				.build();
-		try (Response response = client.newCall(request).execute()) {
-
-			servletresponse=response.body().string();
-			System.out.println("immagine grande " +servletresponse.length() );
-
-			return servletresponse;
-		} catch (IOException e) {
-			System.out.println("eccezionale ");
-			e.printStackTrace();
-		}
-		return "vuoto";
-
-	}*/
-
-	/*Thread thread = new Thread() {//LOLLO
-		@Override
-		public void run() {
-			final String json ="{'message_type':'5',\n}" +
-					"'idStep_': '"+ idProssimoIndizio + "',\n }";
-			String response_send = send(URL, json);
-
-			if (response_send==null || response_send.length()==0 || response_send.compareTo("vuoto")==0) {
-				System.out.println("dati eventi vuoti dopo thread");
-			}
-
-			String[] elements=response_send.split(";");
-			String[] answerData=null;
-			System.out.println("response_send last: "+elements[elements.length-1]);
-			int N=Integer.parseInt(elements[elements.length-1]);
-
-			if (N!=3) {
-				System.out.println("Errore, numero di risposte errato!");
-			}
-
-			question=elements[0];
-			System.out.println("Question "+question);
-
-			mPoi=new AugmentedPOI[N];
-			pointerIcon=new ImageView[N];
-
-			byte[] encodeByte=null;
-			answers=new Answer[N];
-			for (int i=0;i<N;i++) {
-				answerData=elements[i+1].split(",");
-				encodeByte=Base64.decode(answerData[2],Base64.NO_PADDING);
-				System.out.println("lunghezza prova: " +encodeByte.length);
-				answers[i]=new Answer(answerData[0], (answerData[1].compareTo("1") == 0) ? true : false, BitmapFactory.decodeByteArray(encodeByte, 0, encodeByte.length));
-				System.out.println("Indizio "+i+", "+answers[i].text+", "+answers[i].correct+"("+answerData[1]+"), altezza immagine: " +answers[i].image.getHeight());
-			}
-
-			System.out.println("Risposte ottenute");
-			firstTime=true;
-		}
-	};*/
+	
 
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
